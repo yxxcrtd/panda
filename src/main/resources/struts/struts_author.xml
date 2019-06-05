@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="author" extends="authorization" namespace="/">
+		<default-interceptor-ref name="authorizationstack"></default-interceptor-ref>
+		<action name="adel" class="com.chinaedustar.app.achievement.action.AuthorAction" method="del" />
+	</package>
+</struts>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="archivement" extends="authorization" namespace="/">
+		<default-interceptor-ref name="authorizationstack"></default-interceptor-ref>
+		<action name="upload" class="com.chinaedustar.app.achievement.action.ArchivementAction" method="uploadBaseInfo">
+			<result type="freemarker">/WEB-INF/ftl/archivement/ArchivementUpload.ftl</result>
+		</action>
+		<action name="upload2" class="com.chinaedustar.app.achievement.action.ArchivementAction" method="uploadResult">
+			<result type="freemarker">/WEB-INF/ftl/archivement/ArchivementUpload2.ftl</result>
+		</action>
+		<action name="uploadResult" class="com.chinaedustar.app.achievement.action.ArchivementAction" method="upload2Result">
+			<result type="freemarker">/WEB-INF/ftl/archivement/ArchivementUploadResult.ftl</result>
+		</action>
+		<action name="upload2List" class="com.chinaedustar.app.achievement.action.ArchivementAction" method="upload2ResultList">
+			<result type="freemarker">/WEB-INF/ftl/archivement/ArchivementUploadResultList.ftl</result>
+		</action>
+		<action name="arch_photo_summary" class="com.chinaedustar.app.achievement.action.ArchivementAction" method="summary" />
+		<action name="delResult" class="com.chinaedustar.app.achievement.action.ArchivementAction" method="delResult" />
+		<action name="arch_edit" class="com.chinaedustar.app.achievement.action.ArchivementAction" method="edit">
+			<result name="edit_success" type="freemarker">/WEB-INF/ftl/archivement/ArchivementEdit.ftl</result>
+		</action>
+		<action name="query_stage" class="com.chinaedustar.app.achievement.action.ArchivementAction" method="queryStage" />
+		
+		<action name="arch_save" class="com.chinaedustar.app.achievement.action.ArchivementAction" method="save" />
+		<action name="arch_del" class="com.chinaedustar.app.achievement.action.ArchivementAction" method="del" />
+		<action name="arch_detail" class="com.chinaedustar.app.achievement.action.ArchivementAction" method="detail">
+			<result type="freemarker">/WEB-INF/ftl/archivement/ArchivementDetail.ftl</result>
+		</action>
+		<action name="arch_topic" class="com.chinaedustar.app.achievement.action.ArchivementAction" method="topic" />
+		<action name="arch_topic_more" class="com.chinaedustar.app.achievement.action.ArchivementAction" method="topic_more">
+			<result type="freemarker">/WEB-INF/ftl/archivement/ArchivementDetailTopicMore.ftl</result>
+		</action>
+		<action name="arch_topic_del" class="com.chinaedustar.app.achievement.action.ArchivementAction" method="topic_del" />
+		<action name="arch_search" class="com.chinaedustar.app.achievement.action.ArchivementAction" method="search">
+			<result type="freemarker">/WEB-INF/ftl/archivement/ArchivementSearch.ftl</result>
+		</action>
+		<action name="category" class="com.chinaedustar.app.achievement.action.ArchivementCategoryAction" method="category">
+			<result type="freemarker">/WEB-INF/ftl/archivement/ArchivementCategory.ftl</result>
+		</action>
+		<action name="arch_search_user" class="com.chinaedustar.app.achievement.action.ArchivementAction" method="search_user">
+			<result name="success" type="freemarker">/WEB-INF/ftl/archivement/ArchivementEditAddAuthorList.ftl</result>
+		</action>
+	</package>
+</struts>
